@@ -1,17 +1,27 @@
 import { renderHook } from '@testing-library/react-hooks';
+import 'expo-modules-core'; // sets up the expo global object
 
-import * as Font from '../Font';
-import { useFonts } from '../FontHooks';
+globalThis.expo.modules.ExpoFontLoader = {
+  loadedFonts: [],
+};
 
 describe('useFonts', () => {
+  let useFonts: typeof import('../FontHooks').useFonts;
+  let Font: typeof import('../Font');
+  let loadAsyncSpy;
+
+  beforeAll(async () => {
+    Font = await import('../Font'); //
+    ({ useFonts } = await import('../FontHooks'));
+    loadAsyncSpy = jest.spyOn(Font, 'loadAsync').mockResolvedValue();
+  });
+
   const DATA = 0;
   const ERROR = 1;
   const FONTS = {
     'OpenSans-Regular': 'path/to/font.ttf',
     'ComicSans-Regular': 'path/to/jailed/font.ttf',
   };
-
-  const loadAsyncSpy = jest.spyOn(Font, 'loadAsync').mockResolvedValue();
 
   if (typeof window === 'undefined') {
     it('loads fonts when mounted', async () => {
