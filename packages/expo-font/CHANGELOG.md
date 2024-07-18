@@ -6,7 +6,7 @@
 
 ### 🎉 New features
 
-- Expose loadedFonts native property
+- Expose loadedFonts native property ([#30431](https://github.com/expo/expo/pull/30431) by [@vonovak](https://github.com/vonovak))
 - Allow woff and woff2 format on iOS with the config plugin. ([#30220](https://github.com/expo/expo/pull/30220) by [@titozzz](https://github/Titozzz))
 
 ### 🐛 Bug fixes
