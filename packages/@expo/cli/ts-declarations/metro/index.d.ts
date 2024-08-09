@@ -251,7 +251,7 @@ declare module 'metro/src/ModuleGraph/worker/JsFileWrapping' {
 }
 declare module 'metro/src/DeltaBundler' {
   import { SourceLocation } from '@babel/types';
-  export type AsyncDependencyType = 'weak' | 'async' | 'prefetch';
+  export type AsyncDependencyType = 'async' | 'maybeSync' | 'prefetch' | 'weak';
   export type TransformResultDependency = {
     /**
      * The literal name provided to a require or import call. For example 'foo' in
@@ -323,12 +323,23 @@ declare module 'metro/src/DeltaBundler/Serializers/sourceMapString' {
   import type { SourceMapGeneratorOptions } from 'metro/src/DeltaBundler/Serializers/sourceMapGenerator';
   import type { Module } from 'metro';
 
-  function sourceMapString(
+  declare function sourceMapString(
     modules: readonly Array<Module<any>>,
     options: SourceMapGeneratorOptions
   ): string;
 
-  export default sourceMapString;
+  declare async function sourceMapStringNonBlocking(
+    modules: readonly Array<Module<any>>,
+    options: SourceMapGeneratorOptions
+  ): Promise<string>;
+
+  declare var _export: {
+    sourceMapString: typeof sourceMapString,
+    sourceMapStringNonBlocking: typeof sourceMapStringNonBlocking,
+  } | typeof sourceMapString
+
+  // NOTE(@kitten): The export changed to an object in metro@0.80.10
+  export = _export;
 }
 
 declare module 'metro/src/DeltaBundler/Serializers/getAssets' {

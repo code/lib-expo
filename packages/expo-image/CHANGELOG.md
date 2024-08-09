@@ -4,6 +4,8 @@
 
 ### 🛠 Breaking changes
 
+- Bumped iOS and tvOS deployment target to 15.1. ([#30840](https://github.com/expo/expo/pull/30840), [#30871](https://github.com/expo/expo/pull/30871) by [@tsapeta](https://github.com/tsapeta))
+
 ### 🎉 New features
 
 - Add basic React Server Component support. ([#29869](https://github.com/expo/expo/pull/29869) by [@EvanBacon](https://github.com/EvanBacon))
@@ -13,10 +15,6 @@
 ### 🐛 Bug fixes
 
 - Fix props not being passed to parent container. ([#29416](https://github.com/expo/expo/pull/29416) by [@aleqsio](https://github.com/aleqsio))
-- [Web] Fix blurhash not working and causing fetches to `blurhash:/` uri. ([#27587](https://github.com/expo/expo/pull/27587) by [@aleqsio](https://github.com/aleqsio))
-- [iOS] Fixed `blurRadius` not working. Also made the effect render more consistently across platforms. ([#29678](https://github.com/expo/expo/pull/29678) by [@vonovak](https://github.com/vonovak))
-- Fixed `tintColor` not working on Safari browsers. ([#29169](https://github.com/expo/expo/pull/29169) by [@bradleyayers](https://github.com/bradleyayers))
-- Fixed reanimated support on web. ([#29197](https://github.com/expo/expo/pull/29197) by [@nishan](https://github.com/intergalacticspacehighway))
 - Add missing `react` and `react-native` peer dependencies for isolated modules. ([#30469](https://github.com/expo/expo/pull/30469) by [@byCedric](https://github.com/byCedric))
 - Add missing `react-native-web` optional peer dependency for isolated modules. ([#30689](https://github.com/expo/expo/pull/30689) by [@byCedric](https://github.com/byCedric))
 
@@ -27,6 +25,15 @@
 ### ⚠️ Notices
 
 - Added support for React Native 0.75.x. ([#30034](https://github.com/expo/expo/pull/30034) by [@gabrieldonadel](https://github.com/gabrieldonadel))
+
+## 1.12.13 - 2024-07-16
+
+### 🐛 Bug fixes
+
+- [Web] Fix blurhash not working and causing fetches to `blurhash:/` uri. ([#27587](https://github.com/expo/expo/pull/27587) by [@aleqsio](https://github.com/aleqsio))
+- [iOS] Fixed `blurRadius` not working. Also made the effect render more consistently across platforms. ([#29678](https://github.com/expo/expo/pull/29678) by [@vonovak](https://github.com/vonovak))
+- Fixed `tintColor` not working on Safari browsers. ([#29169](https://github.com/expo/expo/pull/29169) by [@bradleyayers](https://github.com/bradleyayers))
+- Fixed reanimated support on web. ([#29197](https://github.com/expo/expo/pull/29197) by [@nishan](https://github.com/intergalacticspacehighway)) ([#29197](https://github.com/expo/expo/pull/29197) by [@intergalacticspacehighway](https://github.com/intergalacticspacehighway))
 
 ## 1.12.12 - 2024-06-13
 

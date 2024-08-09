@@ -4,15 +4,22 @@
 
 ### 🛠 Breaking changes
 
+- Bumped iOS deployment target to 15.1. ([#30840](https://github.com/expo/expo/pull/30840) by [@tsapeta](https://github.com/tsapeta))
+
 ### 🎉 New features
 
 ### 🐛 Bug fixes
 
 - [iOS] Provide more image metadata in the result object. ([#29648](https://github.com/expo/expo/pull/29648) by [@vonovak](https://github.com/vonovak))
-- [iOS] Fix an issue where the app will crash when using the popover presentation style on iPad. ([#29892](https://github.com/expo/expo/pull/29892) by [@alanjhughes](https://github.com/alanjhughes))
 - Only import from `expo/config-plugins` to follow proper dependency chains. ([#30499](https://github.com/expo/expo/pull/30499) by [@byCedric](https://github.com/byCedric))
 
 ### 💡 Others
+
+## 15.0.7 - 2024-07-03
+
+### 🐛 Bug fixes
+
+- [iOS] Fix an issue where the app will crash when using the popover presentation style on iPad. ([#29892](https://github.com/expo/expo/pull/29892) by [@alanjhughes](https://github.com/alanjhughes))
 
 ## 15.0.6 - 2024-06-20
 

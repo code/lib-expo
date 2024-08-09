@@ -4,21 +4,49 @@
 
 ### 🛠 Breaking changes
 
+- Bumped iOS deployment target to 15.1. ([#30840](https://github.com/expo/expo/pull/30840), [#30862](https://github.com/expo/expo/pull/30862) by [@tsapeta](https://github.com/tsapeta))
+
 ### 🎉 New features
+
+### 🐛 Bug fixes
+
+- Add missing `react` and `react-native` peer dependencies for isolated modules. ([#30478](https://github.com/expo/expo/pull/30478) by [@byCedric](https://github.com/byCedric))
+- [Android] Eliminate unsupported types when processing notification intents from onCreate/onNewIntent. ([#30750](https://github.com/expo/expo/pull/30750) by [@douglowder](https://github.com/douglowder))
+
+### 💡 Others
+
+- Keep using the legacy event emitter as the module is not fully migrated to Expo Modules API. ([#28946](https://github.com/expo/expo/pull/28946) by [@tsapeta](https://github.com/tsapeta))
+
+## 0.28.14 - 2024-07-30
+
+### 🐛 Bug fixes
+
+- `useLastNotificationResponse` should have only one effect. ([#30653](https://github.com/expo/expo/pull/30653) by [@douglowder](https://github.com/douglowder))
+
+## 0.28.13 - 2024-07-29
+
+### 🐛 Bug fixes
+
+- [Android] map Expo and Firebase notifications correctly. ([#30615](https://github.com/expo/expo/pull/30615) by [@douglowder](https://github.com/douglowder))
+
+## 0.28.12 - 2024-07-25
 
 ### 🐛 Bug fixes
 
 - [Android] Android 11 crash when click foreground notifications. ([#30207](https://github.com/expo/expo/pull/30207) by [@GrinZero](https://github.com/GrinZero))
 - Notification's textInput content would contain `placeholder` instead of the actual user input ([#27479](https://github.com/expo/expo/pull/27479) by [@Victor-FT](https://github.com/Victor-FT))
-- [Android] fix getLastNotificationResponseAsync. ([#30301](https://github.com/expo/expo/pull/30301) by [@douglowder](https://github.com/douglowder))
-- Add missing `react` and `react-native` peer dependencies for isolated modules. ([#30478](https://github.com/expo/expo/pull/30478) by [@byCedric](https://github.com/byCedric))
+
+## 0.28.11 - 2024-07-22
+
+### 🐛 Bug fixes
+
 - [Android] Fix serialization of vibration pattern. ([#30495](https://github.com/expo/expo/pull/30495) by [@douglowder](https://github.com/douglowder))
-- [Android] map Expo and Firebase notifications correctly. ([#30615](https://github.com/expo/expo/pull/30615) by [@douglowder](https://github.com/douglowder))
-- `useLastNotificationResponse` should have only one effect. ([#30653](https://github.com/expo/expo/pull/30653) by [@douglowder](https://github.com/douglowder))
 
-### 💡 Others
+## 0.28.10 - 2024-07-15
 
-- Keep using the legacy event emitter as the module is not fully migrated to Expo Modules API. ([#28946](https://github.com/expo/expo/pull/28946) by [@tsapeta](https://github.com/tsapeta))
+### 🐛 Bug fixes
+
+- [Android] fix getLastNotificationResponseAsync. ([#30301](https://github.com/expo/expo/pull/30301) by [@douglowder](https://github.com/douglowder))
 
 ## 0.28.9 - 2024-06-12
 
